@@ -44,7 +44,7 @@ const [jobPosition,setJobPosition]=useState('');
     }
     function UploadImage (){
     
-   const  hanldleImageUpload= (event) =>{
+   const  hanldleImageUpload= () =>{
         
     const formImage = new formImage();
     formImage.append('image',image)
