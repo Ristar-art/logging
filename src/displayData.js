@@ -1,3 +1,6 @@
+import axios from "axios";
+import { ReactDOM } from "react";
+
 import { useState, useEffect } from "react"
 
 function DisplayData(){
@@ -5,23 +8,33 @@ function DisplayData(){
 const [profile, setProfile] = useState([]);
 
 
-useEffect(()=>{
-
-    fetch('http://localhost:7000/profile')
-    .then(res =>{
-        return res.json();
-        
-    }).then(data =>{
-        setProfile(data);       
-        console.log(data);
-    })
-},[])
-
-function deleteData(){
 
 
+    const fetctPodt = async() =>{
+    const res = await fetch('http://localhost:7000/profile');
+        const data = await res.json();
+        setProfile(data)
+    }
+   
+     useEffect(()=>{
+        fetctPodt()
+      },[]);
+
+const deletePrifile =async(id) => {  
+const res = await fetch('http://localhost:7000/profile/${profile/${id}',{
+    method: 'DELETE'
+   
 }
 
+); 
+alert(`The name you entered was: ${res.status }`);
+if(res.status === 404){
+    
+    setProfile(profile.filter((profile)=>{return profile.id !==id;}))
+}
+
+
+};
     return(
         
         <div ClassName = "Front">
@@ -49,17 +62,18 @@ function deleteData(){
                      <p>Call-{worker.phoneNumber}</p> 
                  </div>
               
-                {/* <div className="Position">
-                     <p>Position-{worker.jopPosition}</p> 
+                 <div className="Position">
+                     <p>{worker.jopPosition}</p> 
+              
                       </div>
-             */}
-                <div className="delete">
-                     <button> Delete</button>
-                </div>
-            
+                      <div className="delete">
+           <button onClick = {()=>  deletePrifile (worker.id)} > Delete</button>
+      </div> 
               </div>
            
-           ))}  
+           ))} 
+
+           
         </div>
 
     )

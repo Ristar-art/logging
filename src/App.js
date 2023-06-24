@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import AddDetails from './components/addDetails';
 
-import DisplayData from './displayData';
+import DisplayData from './displayData'
 
 import { useState } from 'react';
 
@@ -17,7 +17,7 @@ function App() {
        <div className = "output"> 
      
         <DisplayData/>
-        </div>
+        </div> 
 
     </div>
     
