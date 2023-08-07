@@ -1,7 +1,0 @@
-function deleteProfile (){
-
-    return(
-
-
-    )
-}
