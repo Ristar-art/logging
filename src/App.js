@@ -9,8 +9,8 @@ import { useState } from 'react';
 function App() {
 
   return (
-    <div>
-       <div className = "container">
+    <div style={{display:'flex',flexDirection:'row'}}>
+       <div style={{height:"100vh",width:"45vh", backgroundColor:"#FEFFEC", justifyContent:"center",display:'flex'}}>
      
         <AddDetails/>    
        </div >

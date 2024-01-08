@@ -86,7 +86,7 @@ function DisplayData() {
 
   return (
     <div className="Front">
-      <h1>Worker profiles</h1>
+      <h1>XYZ Worker profiles</h1>
       {profile.map((worker) => (
         <div className="worker-preview" key={worker.id}>
           <div className="image">
