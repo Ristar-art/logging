@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
 
   return (
-    <div style={{display:'flex',flexDirection:'row'}}>
+    <div style={{display:'flex',flexDirection:'row',backgroundColor:'white'}}>
        <div style={{height:"100vh",width:"45vh", backgroundColor:"#FEFFEC", justifyContent:"center",display:'flex'}}>
      
         <AddDetails/>    

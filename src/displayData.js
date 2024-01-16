@@ -88,7 +88,7 @@ function DisplayData() {
     <div className="Front">
       <h1>XYZ Worker profiles</h1>
       {profile.map((worker) => (
-        <div className="worker-preview" key={worker.id}>
+        <div style={{padding:10,backgroundColor:'white'}} key={worker.id}>
           <div className="image">
             {editingWorkerId === worker.id && image ? (
               <img src={image} alt="Profile" style={{ width: "200px", height: "200px" }} />
@@ -180,11 +180,11 @@ function DisplayData() {
             </div>
           ) : (
             <div className="edit">
-              <button onClick={() => startEditing(worker.id)}>Edit</button>
+              <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid"}} onClick={() => startEditing(worker.id)}>Edit</button>
             </div>
           )}
           <div className="delete">
-            <button onClick={() => deleteProfile(worker.id)}>Delete</button>
+            <button style={{height:'5vh',width:'10vw',borderRadius:5,border:"1px black solid"}} onClick={() => deleteProfile(worker.id)}>Delete</button>
           </div>
         </div>
       ))}

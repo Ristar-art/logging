@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
-  background-color: #f7f7ff;
+  background-color: white;
   padding-left: 300px;
   width: 500px;
 }
@@ -49,6 +49,7 @@ option {
   width: 500px;
   display: flex;
   flex-direction: column;
+  background-color: 'white';
 }
 
 
