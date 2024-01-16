@@ -1,4 +1,4 @@
-# Getting Started with Logginf for company XYZ
+# Getting Started with Logging for company XYZ
 
 
 ## Available Scripts
